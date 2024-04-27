@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.link {
+  @apply border-none before:ml-auto before:content-[''] before:bg-blue-900 before:block before:transition-all before:delay-150 after:content-[''] after:w-0 after:h-0.5 after:bg-blue-900 after:block after:transition-all after:delay-150 hover:before:w-full hover:after:w-full;
+}
+
+/* .link {
+  @apply relative border-none transition-all delay-150  before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-full before:transition-all before:delay-150 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:transition-all after:delay-150 hover:before:h-0.5 hover:before:bg-[#ffc506] hover:before:transition-all hover:before:delay-75 hover:after:h-0.5 hover:after:bg-[#ffc506] hover:after:transition-all hover:after:delay-75;
+} */
