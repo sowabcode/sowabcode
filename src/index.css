@@ -1,14 +1,226 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .link {
-  @apply border-none before:ml-auto before:content-[''] before:bg-blue-900 before:block before:transition-all before:delay-150 after:content-[''] after:w-0 after:h-0.5 after:bg-blue-900 after:block after:transition-all after:delay-150 hover:before:w-full hover:after:w-full;
+  @apply border-none hover:text-blue-900 before:ml-auto before:content-[''] before:bg-blue-900 before:block before:transition-all before:delay-150 after:content-[''] after:w-0 after:h-0.5 after:bg-blue-900 after:block after:transition-all after:delay-150 hover:before:w-full hover:after:w-full;
 }
+
+.active {
+  @apply text-blue-900 border-none before:ml-auto before:content-[''] before:bg-blue-900 before:block before:transition-all before:delay-150 after:content-['']  after:h-0.5 after:bg-blue-900 after:block after:transition-all after:delay-150 before:w-full after:w-full;
+}
+
+.banner {
+  background-image: url("./assets/images/banner1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-pic {
+  position: relative;
+  /* background-image: url("./assets/images/Aboulaye.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  border-radius: 24px;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content {
+  background-image: url("./assets/images/Aboulaye.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px; */
+  /* padding: 36px; */
+  /* border-radius: 22px; */
+  /* color: #ffffff; */
+  overflow: hidden;
+  /* background: #0a3cff; */
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content::before {
+  position: absolute;
+  content: "";
+  top: -4%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%);
+  background: #ced8ff;
+  z-index: -1;
+  transform-origin: bottom;
+  border-radius: 24px;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content::after {
+  position: absolute;
+  content: "";
+  top: -8%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%);
+  background: #e7ecff;
+  z-index: -2;
+  transform-origin: bottom;
+  border-radius: 24px;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.about-pic:hover {
+  /* transform: translate(0px, -16px); */
+  transform: translate(0px, 0px);
+}
+
+.about-pic:hover .content::before {
+  /* rotate: -8deg; */
+  top: 8%;
+  left: 60%;
+  width: 100%;
+  height: 100%;
+}
+
+.about-pic:hover .content::after {
+  /* rotate: 8deg; */
+  top: -8%;
+  left: 40%;
+  width: 100%;
+  height: 100%;
+}
+
+.my-anima {
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.my-animation {
+  position: relative;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.my-animation .view-project-tools {
+  position: absolute;
+  inset: 0;
+  width: calc(100% - 1.4rem);
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  /* font-weight: bold; */
+  right: 100%;
+  opacity: 0;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 100;
+}
+
+.my-animation > :not(span) {
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.my-animation:hover .view-project-tools {
+  top: 11px;
+  left: 11px;
+  opacity: 1;
+  z-index: 100;
+  /* font-size: 1.2em; */
+}
+
+@media (max-width: 1266px) {
+  .my-animation .view-project-tools {
+    /* width: 95%; */
+    height: 14rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .my-animation .view-project-tools {
+    /* width: 96%; */
+    height: 10rem;
+  }
+}
+
+/* CONTACT  */
+
+.img-contact {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/images/img-contact.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* PORTFOLIO LIKED PART */
+
+.mini-portfolio {
+  width: 100%;
+  height: 200px;
+  background-image: url("./assets/images/portfolio_banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* .about-pic {
+  position: relative;
+  background-image: url("./assets/images/Aboulaye.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: red;
+  z-index: 100;
+  rotate: 8deg;
+  transform-origin: right bottom;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+} */
+
+/* .about-pic {
+  position: relative;
+  background-image: url("./assets/images/Aboulaye.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+}
+
+.about-pic:hover {
+  border-color: #008bf8;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.about-pic:hover {
+  rotate: 0deg;
+}
+
+.about-pic::after:hover {
+  transform: rotate(0);
+} */
+
+/* .about-pic::after {
+  content: "";
+  position: absolute;
+  transform: rotate(-15deg);
+  width: 100%;
+  height: 100%;
+  border: 8px solid #ff7f50;
+  z-index: -10;
+} */
 
 /* .link {
   @apply relative border-none transition-all delay-150  before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-full before:transition-all before:delay-150 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:transition-all after:delay-150 hover:before:h-0.5 hover:before:bg-[#ffc506] hover:before:transition-all hover:before:delay-75 hover:after:h-0.5 hover:after:bg-[#ffc506] hover:after:transition-all hover:after:delay-75;

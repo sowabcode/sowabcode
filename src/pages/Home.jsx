@@ -10,22 +10,24 @@ import abdoul from "../assets/images/Aboulaye.jpg";
 // bg-[#e3eeff]
 const Home = () => {
   return (
-    <div className="px-[14rem] h-screen w-screen bg-[#dfe9f3] pt-4">
+    <div className="banner px-[14rem] h-screen w-screen overflow-hidden bg-blue-100 pt-4 max-xl:h-full max-xl:px-[8rem] max-lg:px-[4rem] max-md:px-[2rem] my-anima">
       <Topbar />
 
-      <div className="grid grid-cols-2 place-content-center h-[calc(100%-14rem)] mt-20">
+      <div className="h-[calc(100%-14rem)] grid grid-cols-2 place-content-center mt-36 pb-10 max-xl:h-auto max-xl:flex max-xl:flex-col-reverse max-xl:items-center max-xl:gap-10 max-xl:mt-20">
         <div className="flex flex-col items-start justify-center">
           <h2 className="text-2xl">Hello,</h2>
-          <h1 className="text-5xl my-5">I&apos;m SOWABCODE</h1>
+          <h1 className="font-['Rubik'] text-5xl my-5 max-md:text-4xl">
+            I&apos;m SOWABCODE
+          </h1>
           <p className="">
-            <span className="text-[1.5rem]">I&apos;m </span>
+            <span className="text-[1.5rem]">I&apos;m a </span>
             <TypeAnimation
               sequence={[
                 // Same substring at the start will only be typed out once, initially
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
                 "Frontend Developper",
                 1000,
-                "a web designer",
+                "Web Designer",
                 1000,
                 // "We produce food for Chinchillas",
                 // 1000,
@@ -38,18 +40,20 @@ const Home = () => {
             />
           </p>
 
-          <p className="my-5 leading-5 font-thin w-[400px]">
+          <p className="my-5 leading-5 w-[400px] max-md:w-full">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-            nobis? tenetur, cupiditate, ad nobis voluptatibus deleniti quis
-            dignissimos sunt!
+            nobis? tenetur, cupiditate, ad nobis deleniti quis sunt!
           </p>
 
-          <div className="flex items-center gap-5">
-            <button className="flex items-center gap-4 rounded border-2 border-blue-900 px-4 py-1.5 bg-blue-900 text-white">
+          <div className="flex items-center gap-5 max-[500px]:gap-3">
+            <button className="group flex items-center gap-4 rounded border-2 border-blue-900 px-4 py-1.5 bg-blue-900 text-white max-[500px]:px-2">
               <span>About me</span>
-              <MdKeyboardArrowRight size={20} />
+              <MdKeyboardArrowRight
+                size={20}
+                className="group-hover:translate-x-1 my-anima"
+              />
             </button>
-            <button className="flex items-center gap-4 rounded border-2 border-blue-900 px-4 py-1.5 text-blue-900">
+            <button className="flex items-center gap-4 rounded border-2 border-blue-900 px-4 py-1.5 text-blue-900 max-[500px]:px-2">
               <span>Download CV</span>
               <MdOutlineFileDownload size={20} />
             </button>
@@ -58,18 +62,18 @@ const Home = () => {
         <div className="flex items-center justify-center relative">
           <img
             src={abdoul}
-            className="w-9h-96 h-96 rounded-full shadow-md"
+            className="w-96 h-96 rounded-full shadow-md max-[500px]:w-80 max-[500px]:h-80 max-[400px]:w-72 max-[400px]:h-72"
             alt=""
           />
 
-          <span className="absolute -top-24 grid place-items-center bg-white rounded-full p-4 hover:shadow-md transform-style-3d">
-            <FaHtml5 size={45} />
+          <span className="absolute -top-20 grid place-items-center hover:bg-white rounded-full p-4 hover:shadow-md max-xl:top-4 max-xl:right-8 max-sm:top-1">
+            <FaHtml5 size={35} color="orange" />
           </span>
-          <span className="absolute -bottom-24 grid place-items-center bg-white rounded-full p-4 hover:shadow-md transform-style-3d">
-            <FaHtml5 size={45} />
+          <span className="absolute -bottom-20 grid place-items-center hover:bg-white rounded-full p-4 hover:shadow-md max-xl:bottom-4 max-xl:right-8 max-sm:-bottom-1">
+            <FaHtml5 size={35} color="blue" />
           </span>
-          <span className="absolute -right-4 grid place-items-center bg-white rounded-full p-4 hover:shadow-md transform-style-3d">
-            <FaHtml5 size={45} />
+          <span className="absolute right-0 grid place-items-center hover:bg-white rounded-full p-4 hover:shadow-md max-xl:-right-8 z-10">
+            <FaHtml5 size={35} color="yellow" />
           </span>
         </div>
       </div>
