@@ -8,13 +8,14 @@ import { TypeAnimation } from "react-type-animation";
 
 import abdoul from "../assets/images/Aboulaye.jpg";
 // bg-[#e3eeff]
+
 const Home = () => {
   return (
-    <div className="banner px-[14rem] h-screen w-screen overflow-hidden bg-blue-100 pt-4 max-xl:h-full max-xl:px-[8rem] max-lg:px-[4rem] max-md:px-[2rem] my-anima">
+    <div className="z-10 banner relative px-[14rem] h-screen w-screen overflow-hidden bg-blue-100 pt-4 max-xl:h-full max-xl:px-[8rem] max-lg:px-[4rem] max-md:px-[2rem] my-anima">
       <Topbar />
 
-      <div className="h-[calc(100%-14rem)] grid grid-cols-2 place-content-center mt-36 pb-10 max-xl:h-auto max-xl:flex max-xl:flex-col-reverse max-xl:items-center max-xl:gap-10 max-xl:mt-20">
-        <div className="flex flex-col items-start justify-center">
+      <div className="z-30 h-[calc(100%-14rem)] grid grid-cols-2 place-content-center mt-36 pb-10 max-xl:h-auto max-xl:flex max-xl:flex-col-reverse max-xl:items-center max-xl:gap-10 max-xl:mt-20">
+        <div className="z-40 flex flex-col items-start justify-center">
           <h2 className="text-2xl">Hello,</h2>
           <h1 className="font-['Rubik'] text-5xl my-5 max-md:text-4xl">
             I&apos;m SOWABCODE
@@ -40,10 +41,23 @@ const Home = () => {
             />
           </p>
 
-          <p className="my-5 leading-5 w-[400px] max-md:w-full">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-            nobis? tenetur, cupiditate, ad nobis deleniti quis sunt!
+          <p className="text-[.95rem] font-['Montserrat'] font-[500] text-black my-5 leading-[1.4rem] w-[500px] max-md:w-full">
+            Je crée des expériences utilisateurs exceptionnelles avec des
+            interfaces intuitives. Je mets l&apos;accent sur les détails, la
+            scalabilité et les performances pour garantir des solutions robustes
+            et efficaces.
           </p>
+          {/* Je crée des expériences utilisateurs exceptionnelles avec des
+            interfaces intuitives qui répondent parfaitement aux besoins des
+            utilisateurs. Je mets l&apos;accent sur les détails, la scalabilité
+            et les performances pour garantir des solutions robustes et
+            efficaces. */}
+          {/* <p className="text-[.95rem] font-['Montserrat'] font-[500] text-black my-5 leading-[1.4rem] w-[500px] max-md:w-full">
+            My main goal is to create exceptional user experiences by analyzing
+            and developing intuitive interfaces that perfectly meet user needs.
+            I emphasize details, scalability, and performance to ensure robust
+            and effective solutions.
+          </p> */}
 
           <div className="flex items-center gap-5 max-[500px]:gap-3">
             <button className="group flex items-center gap-4 rounded border-2 border-blue-900 px-4 py-1.5 bg-blue-900 text-white max-[500px]:px-2">
@@ -59,7 +73,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="flex items-center justify-center relative">
+        <div className="z-40 flex items-center justify-center relative">
           <img
             src={abdoul}
             className="w-96 h-96 rounded-full shadow-md max-[500px]:w-80 max-[500px]:h-80 max-[400px]:w-72 max-[400px]:h-72"
@@ -77,6 +91,9 @@ const Home = () => {
           </span>
         </div>
       </div>
+
+      {/* Hero background color degrad */}
+      <div className="z-20 absolute left-0 bottom-0 w-full h-96 bac-color"></div>
     </div>
   );
 };

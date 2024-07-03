@@ -1,4 +1,14 @@
+// import { useRef } from "react";
+
 const Contact = () => {
+  // const form = useRef();
+
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+
+  //   console.log(form.current["user_name"]);
+  // };
+
   return (
     <div
       name="contact"
@@ -17,32 +27,36 @@ const Contact = () => {
             Contactez-moi en quelque clique.
           </h3>
 
-          <div className="flex flex-col gap-4">
+          <form
+            // ref={form} onSubmit={sendEmail}
+            className="flex flex-col gap-4"
+          >
             <input
               type="text"
+              name="user_name"
               className="border-2 rounded-lg py-1.5 px-2"
               placeholder="Full Name *"
             />
             <input
               type="text"
+              name="user_email"
               className="border-2 rounded-lg py-1.5 px-2"
               placeholder="Email address *"
             />
             <textarea
-              name=""
+              name="message"
               id=""
               cols="30"
               rows="5"
               className="border-2 rounded-lg py-1.5 px-2"
               placeholder="Message *"
             ></textarea>
-          </div>
-
-          <div className="flex items-center justify-end">
-            <button className="text-right mt-4 border-2 px-4 rounded-lg py-1.5">
-              Send
-            </button>
-          </div>
+            <div className="flex items-center justify-end">
+              <button className="text-right border-2 px-4 rounded-lg py-1.5">
+                Send
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
