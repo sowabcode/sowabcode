@@ -7,6 +7,8 @@ import { FaHtml5 } from "react-icons/fa6";
 import { TypeAnimation } from "react-type-animation";
 
 import abdoul from "../assets/images/Aboulaye.jpg";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
 // bg-[#e3eeff]
 
 const Home = () => {
@@ -15,7 +17,13 @@ const Home = () => {
       <Topbar />
 
       <div className="z-30 h-[calc(100%-14rem)] grid grid-cols-2 place-content-center mt-36 pb-10 max-xl:h-auto max-xl:flex max-xl:flex-col-reverse max-xl:items-center max-xl:gap-10 max-xl:mt-20">
-        <div className="z-40 flex flex-col items-start justify-center">
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="z-40 flex flex-col items-start justify-center"
+        >
           <h2 className="text-2xl">Hello,</h2>
           <h1 className="font-['Rubik'] text-5xl my-5 max-md:text-4xl">
             I&apos;m SOWABCODE
@@ -47,17 +55,6 @@ const Home = () => {
             scalabilité et les performances pour garantir des solutions robustes
             et efficaces.
           </p>
-          {/* Je crée des expériences utilisateurs exceptionnelles avec des
-            interfaces intuitives qui répondent parfaitement aux besoins des
-            utilisateurs. Je mets l&apos;accent sur les détails, la scalabilité
-            et les performances pour garantir des solutions robustes et
-            efficaces. */}
-          {/* <p className="text-[.95rem] font-['Montserrat'] font-[500] text-black my-5 leading-[1.4rem] w-[500px] max-md:w-full">
-            My main goal is to create exceptional user experiences by analyzing
-            and developing intuitive interfaces that perfectly meet user needs.
-            I emphasize details, scalability, and performance to ensure robust
-            and effective solutions.
-          </p> */}
 
           <div className="flex items-center gap-5 max-[500px]:gap-3">
             <button className="group flex items-center gap-4 rounded border-2 border-blue-900 px-4 py-1.5 bg-blue-900 text-white max-[500px]:px-2">
@@ -72,8 +69,14 @@ const Home = () => {
               <MdOutlineFileDownload size={20} />
             </button>
           </div>
-        </div>
-        <div className="z-40 flex items-center justify-center relative">
+        </motion.div>
+        <motion.div
+          variants={fadeIn("left", 0.2)}
+          initial={"hidden"}
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="z-40 flex items-center justify-center relative"
+        >
           <img
             src={abdoul}
             className="w-96 h-96 rounded-full shadow-md max-[500px]:w-80 max-[500px]:h-80 max-[400px]:w-72 max-[400px]:h-72"
@@ -89,7 +92,7 @@ const Home = () => {
           <span className="absolute right-0 grid place-items-center hover:bg-white rounded-full p-4 hover:shadow-md max-xl:-right-8 z-10">
             <FaHtml5 size={35} color="yellow" />
           </span>
-        </div>
+        </motion.div>
       </div>
 
       {/* Hero background color degrad */}
