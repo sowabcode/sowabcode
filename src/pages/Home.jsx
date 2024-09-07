@@ -83,33 +83,15 @@ const Home = () => {
             alt=""
           />
 
-          <motion.span
-            variants={fadeIn("down", 0.2)}
-            initial={"hidden"}
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.7 }}
-            className="absolute -top-20 grid place-items-center hover:bg-white rounded-full p-4 hover:shadow-md max-xl:top-4 max-xl:right-8 max-sm:top-1"
-          >
+          <span className="absolute -top-20 grid place-items-center hover:bg-white rounded-full p-4 hover:shadow-md max-xl:top-4 max-xl:right-8 max-sm:top-1">
             <FaHtml5 size={35} color="orange" />
-          </motion.span>
-          <motion.span
-            variants={fadeIn("up", 0.2)}
-            initial={"hidden"}
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.7 }}
-            className="absolute -bottom-20 grid place-items-center hover:bg-white rounded-full p-4 hover:shadow-md max-xl:bottom-4 max-xl:right-8 max-sm:-bottom-1"
-          >
+          </span>
+          <span className="absolute -bottom-20 grid place-items-center hover:bg-white rounded-full p-4 hover:shadow-md max-xl:bottom-4 max-xl:right-8 max-sm:-bottom-1">
             <FaHtml5 size={35} color="blue" />
-          </motion.span>
-          <motion.span
-            variants={fadeIn("left", 0.2)}
-            initial={"hidden"}
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.7 }}
-            className="absolute right-0 grid place-items-center hover:bg-white rounded-full p-4 hover:shadow-md max-xl:-right-8 z-10"
-          >
+          </span>
+          <span className="absolute right-0 grid place-items-center hover:bg-white rounded-full p-4 hover:shadow-md max-xl:-right-8 z-10">
             <FaHtml5 size={35} color="yellow" />
-          </motion.span>
+          </span>
         </motion.div>
       </div>
 
