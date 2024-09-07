@@ -3,9 +3,6 @@ import i2 from "../assets/images/i2.png";
 import i3 from "../assets/images/i3.png";
 import i4 from "../assets/images/i4.png";
 
-import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
-
 import { FaGithub } from "react-icons/fa";
 import { HiMiniViewfinderCircle } from "react-icons/hi2";
 
@@ -17,13 +14,7 @@ const Projects = () => {
     >
       <h1 className="text-center my-20 text-[1.8rem] max-lg:my-10">Projects</h1>
 
-      <motion.div
-        variants={fadeIn("down", 0.2)}
-        initial={"hidden"}
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
-        className="grid grid-cols-3 gap-10 max-xl:grid-cols-2 max-md:grid-cols-1"
-      >
+      <div className="grid grid-cols-3 gap-10 max-xl:grid-cols-2 max-md:grid-cols-1">
         <div className="bg-white rounded-lg p-3 hover:scale-110 my-animation">
           <span className="view-project-tools">
             <div className="group grid place-items-center cursor-pointer rounded-full p-2 bg-white hover:bg-slate-900 my-anima">
@@ -192,7 +183,7 @@ const Projects = () => {
             </p>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
