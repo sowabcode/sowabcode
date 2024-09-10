@@ -21,19 +21,19 @@ const Contact = () => {
 
       <div className="grid grid-cols-2 rounded-lg bg-white max-lg:grid-cols-1 my-anima">
         <motion.div
-          variants={fadeIn("right", 0.2)}
-          initial={"hidden"}
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+          // variants={fadeIn("right", 0.2)}
+          // initial={"hidden"}
+          // whileInView={"show"}
+          // viewport={{ once: false, amount: 0.7 }}
           className="flex items-center justify-center p-4 max-lg:hidden"
         >
           <div className="img-contact"></div>
         </motion.div>
         <motion.div
-          variants={fadeIn("left", 0.2)}
-          initial={"hidden"}
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+          // variants={fadeIn("left", 0.2)}
+          // initial={"hidden"}
+          // whileInView={"show"}
+          // viewport={{ once: false, amount: 0.7 }}
           className="px-8 py-4 max-sm:px-4 max-sm:py-2"
         >
           <h3 className="my-5 text-lg max-sm:text-sm">

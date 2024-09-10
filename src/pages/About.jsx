@@ -11,10 +11,10 @@ const About = () => {
 
       <div className="grid grid-cols-[30%_auto] gap-24 max-lg:flex max-lg:flex-col max-lg:gap-16  max-lg:pt-0 max-lg:pb-10">
         <motion.div
-          variants={fadeIn("right", 0.2)}
-          initial={"hidden"}
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+          // variants={fadeIn("right", 0.2)}
+          // initial={"hidden"}
+          // whileInView={"show"}
+          // viewport={{ once: false, amount: 0.7 }}
           className="grid place-items-center"
         >
           <div className="about-pic">
@@ -22,10 +22,10 @@ const About = () => {
           </div>
         </motion.div>
         <motion.div
-          variants={fadeIn("left", 0.2)}
-          initial={"hidden"}
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+          // variants={fadeIn("left", 0.2)}
+          // initial={"hidden"}
+          // whileInView={"show"}
+          // viewport={{ once: false, amount: 0.7 }}
           className="flex flex-col items-start justify-between pr-[4rem] max-xl:pr-6 my-anima"
         >
           <div className="flex flex-col items-start">
