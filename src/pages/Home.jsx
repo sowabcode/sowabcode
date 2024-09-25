@@ -8,7 +8,7 @@ import { TypeAnimation } from "react-type-animation";
 
 import abdoul from "../assets/images/Aboulaye.jpg";
 import { motion } from "framer-motion";
-// import { fadeIn } from "../variants";
+import { fadeIn } from "../variants";
 // bg-[#e3eeff]
 
 const Home = () => {
@@ -18,10 +18,10 @@ const Home = () => {
 
       <div className="z-30 h-[calc(100%-14rem)] grid grid-cols-2 place-content-center mt-36 pb-10 max-xl:h-auto max-xl:flex max-xl:flex-col-reverse max-xl:items-center max-xl:gap-10 max-xl:mt-20">
         <motion.div
-          // variants={fadeIn("right", 0.2)}
-          // initial="hidden"
-          // whileInView={"show"}
-          // viewport={{ once: false, amount: 0.7 }}
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.7 }}
           className="z-40 flex flex-col items-start justify-center"
         >
           <h2 className="text-2xl">Hello,</h2>
@@ -71,10 +71,10 @@ const Home = () => {
           </div>
         </motion.div>
         <motion.div
-          // variants={fadeIn("left", 0.2)}
-          // initial={"hidden"}
-          // whileInView={"show"}
-          // viewport={{ once: false, amount: 0.7 }}
+          variants={fadeIn("left", 0.2)}
+          initial={"hidden"}
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.7 }}
           className="z-40 flex items-center justify-center relative"
         >
           <img

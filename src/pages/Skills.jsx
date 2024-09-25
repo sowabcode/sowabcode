@@ -15,7 +15,7 @@ const Skills = () => {
       variants={fadeIn("down", 0.2)}
       initial={"hidden"}
       whileInView={"show"}
-      viewport={{ once: false, amount: 0.7 }}
+      viewport={{ once: true, amount: 0.7 }}
       name="skills"
       className="h-screen overflow-hidden px-[14rem] max-xl:h-full max-xl:px-[8rem] max-lg:px-[4rem] max-md:px-[2rem] pb-[4rem]"
     >

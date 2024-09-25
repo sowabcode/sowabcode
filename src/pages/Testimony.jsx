@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
+
 import t1 from "../assets/images/t1.jpg";
 
 const Testimony = () => {
@@ -8,7 +11,13 @@ const Testimony = () => {
       </h1>
 
       <div className="grid grid-cols-2 place-items-center gap-10 max-lg:grid-cols-1 max-md:gap-5">
-        <div className="flex items-start gap-8 p-4 rounded-lg shadow-md bg-white max-md:gap-4">
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          initial={"hidden"}
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.7 }}
+          className="flex items-start gap-8 p-4 rounded-lg shadow-md bg-white max-md:gap-4"
+        >
           <img
             src={t1}
             className="w-16 h-16 rounded-full border-t-4 border-l-8 border-b-4 border-blue-900"
@@ -23,8 +32,14 @@ const Testimony = () => {
               veritatis porro suscipit fuga?
             </p>
           </div>
-        </div>
-        <div className="flex items-start gap-8 p-4 rounded-lg shadow-md bg-white max-md:gap-4">
+        </motion.div>
+        <motion.div
+          variants={fadeIn("left", 0.2)}
+          initial={"hidden"}
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.7 }}
+          className="flex items-start gap-8 p-4 rounded-lg shadow-md bg-white max-md:gap-4"
+        >
           <img
             src={t1}
             className="w-16 h-16 rounded-full border-t-4 border-l-8 border-b-4 border-blue-900"
@@ -39,7 +54,7 @@ const Testimony = () => {
               veritatis porro suscipit fuga?
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -14,6 +14,9 @@ import {
 
 import { animateScroll as scroll, scroller } from "react-scroll";
 
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
+
 const Footer = () => {
   // const [hash, setHash] = useState("top");
 
@@ -28,7 +31,13 @@ const Footer = () => {
 
   return (
     <div className="bg-blue-100 overflow-hidden px-[14rem] max-xl:px-[8rem] max-lg:px-[4rem] max-md:px-[2rem]">
-      <div className="grid grid-cols-[55%_auto] place-items-start gap-10 py-[2.5rem] px-6 max-md:px-0 max-lg:flex max-lg:flex-col">
+      <motion.div
+        variants={fadeIn("top", 0.2)}
+        initial={"hidden"}
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.7 }}
+        className="grid grid-cols-[55%_auto] place-items-start gap-10 py-[2.5rem] px-6 max-md:px-0 max-lg:flex max-lg:flex-col"
+      >
         <div>
           <h1 className="text-3xl font-[500]">
             <span className="uppercase font-['Rubik']">Sowabcode</span>{" "}
@@ -155,14 +164,20 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="flex items-center justify-between py-5 border-t border-black">
+      </motion.div>
+      <motion.div
+        variants={fadeIn("top", 0.6)}
+        initial={"hidden"}
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.7 }}
+        className="flex items-center justify-between py-5 border-t border-black"
+      >
         <p>
           Made with love by <span className="font-semibold">SOWABCODE</span>
         </p>
 
         <div>Hello!</div>
-      </div>
+      </motion.div>
     </div>
   );
 };
