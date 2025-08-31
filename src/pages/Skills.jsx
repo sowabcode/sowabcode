@@ -1,3 +1,4 @@
+import css from "../assets/images/css.png";
 import html from "../assets/images/html.png";
 import react from "../assets/images/react.png";
 import node from "../assets/images/node-js.png";
@@ -17,7 +18,7 @@ const skills = [
   { name: "Tailwind CSS", img: tailwind },
   { name: "Express JS", img: express },
   { name: "HTML5", img: html },
-  { name: "CSS3", img: html },
+  { name: "CSS3", img: css },
 ];
 
 const Skills = () => {

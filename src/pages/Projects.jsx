@@ -51,7 +51,7 @@ const Projects = () => {
   return (
     <div
       name="projects"
-      className="h-full overflow-hidden px-[14rem] max-xl:px-[8rem] max-lg:px-[4rem] max-md:px-[2rem] pb-[4rem] bg-blue-50"
+      className="h-full overflow-hidden px-[14rem] max-xl:px-[8rem] max-lg:px-[4rem] max-md:px-[2rem] pb-[4rem] bg-slate-100"
     >
       <motion.h1
         variants={fadeIn("down", 0.2)}

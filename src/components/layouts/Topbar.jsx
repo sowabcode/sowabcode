@@ -98,7 +98,16 @@ const Topbar = () => {
           className="flex items-center justify-center gap-2 cursor-pointer"
         >
           <img src={node_js} className="w-7 h-7" alt="Logo" />
-          <h1 className="text-2xl font-[500] max-lg:hidden">SOWABCODE</h1>
+          <h1
+            className="text-2xl font-[500] max-lg:hidden"
+            // style={{
+            //   backgroundImage: "linear-gradient(135deg, #1afbf0, #da00ff)",
+            //   WebkitBackgroundClip: "text",
+            //   WebkitTextFillColor: "transparent",
+            // }}
+          >
+            SOWABCODE
+          </h1>
         </div>
         <label
           // htmlFor="check"
