@@ -15,16 +15,22 @@ const Contact = () => {
       name="contact"
       className="h-screen overflow-hidden px-[14rem] max-xl:px-[8rem] max-xl:h-auto max-lg:px-[4rem] max-md:px-[2rem] pb-[4rem] my-anima"
     >
-      <h1 className="text-center my-20 text-[1.8rem] max-lg:my-10">
+      <motion.h1
+        variants={fadeIn("down", 0.2)}
+        initial={"hidden"}
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-center my-10 text-[2rem] font-[500] max-lg:my-10"
+      >
         Contact Me
-      </h1>
+      </motion.h1>
 
-      <div className="grid grid-cols-2 rounded-lg bg-white max-lg:grid-cols-1 my-anima">
+      <div className="grid grid-cols-2 rounded-lg bg-white max-lg:grid-cols-1 my-anima hover:shadow-md hover:shadow-slate-200">
         <motion.div
           variants={fadeIn("right", 0.2)}
           initial={"hidden"}
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.7 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="flex items-center justify-center p-4 max-lg:hidden"
         >
           <div className="img-contact"></div>
@@ -33,7 +39,7 @@ const Contact = () => {
           variants={fadeIn("left", 0.2)}
           initial={"hidden"}
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.7 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="px-8 py-4 max-sm:px-4 max-sm:py-2"
         >
           <h3 className="my-5 text-lg max-sm:text-sm">

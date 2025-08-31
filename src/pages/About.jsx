@@ -5,14 +5,14 @@ const About = () => {
   return (
     <div
       name="about"
-      className="-z-10 h-screen overflow-hidden px-[14rem] pb-[4rem] max-xl:px-[8rem] max-xl:h-full max-lg:px-[4rem] max-md:px-[2rem] my-anima"
+      className="-z-10 h-auto overflow-hidden px-[14rem] pb-[4rem] max-xl:px-[8rem] max-xl:h-full max-lg:px-[4rem] max-md:px-[2rem] my-anima"
     >
       <motion.h1
-        variants={fadeIn("right", 0.2)}
+        variants={fadeIn("down", 0.2)}
         initial={"hidden"}
         whileInView={"show"}
-        viewport={{ once: true, amount: 0.7 }}
-        className="text-center my-20 text-[1.8rem] max-lg:my-10"
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-center mt-10 mb-20 text-[2rem] font-[500] max-lg:my-10"
       >
         About Me
       </motion.h1>
@@ -22,7 +22,7 @@ const About = () => {
           variants={fadeIn("right", 0.2)}
           initial={"hidden"}
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.7 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="grid place-items-center"
         >
           <div className="about-pic">
@@ -33,8 +33,8 @@ const About = () => {
           variants={fadeIn("left", 0.2)}
           initial={"hidden"}
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.7 }}
-          className="flex flex-col items-start justify-between pr-[4rem] max-xl:pr-6 my-anima"
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col items-start justify-between pr-[4rem] max-xl:pr-6 max-md:pr-0 my-anima"
         >
           <div className="flex flex-col items-start">
             <h1 className="mb-3 text-3xl max-sm:text-2xl max-[400px]:text-xl">
@@ -43,7 +43,7 @@ const About = () => {
             <p className="mb-5 rounded px-4 py-1.5 text-blue-700 bg-blue-200">
               Frontend Developper
             </p>
-            <div className="space-y-3 text-[1rem] font-['Montserrat'] font-[500] text-black">
+            <div className="space-y-3 text-[18px] text-justify text-slate-700">
               <p>
                 Je suis un développeur frontend basé à Conakry, en Guinée, avec
                 2 années d&apos;expériences richent en principes

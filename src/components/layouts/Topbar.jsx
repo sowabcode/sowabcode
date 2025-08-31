@@ -1,21 +1,22 @@
-import { useEffect, useState } from "react";
+import $ from "jquery";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
-import node_js from "../../assets/images/node-js.jpg";
+import { useEffect, useState } from "react";
 
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { MdOutlineLightMode } from "react-icons/md";
 
+import node_js from "../../assets/images/node-js.jpg";
+
 import { animateScroll as scroll, scroller } from "react-scroll";
 
-import $ from "jquery";
-import { motion } from "framer-motion";
 const Topbar = () => {
   const [hash, setHash] = useState("top");
   const [isOpen, setIsOpen] = useState(false);
 
   const handleNavigate = (index) => {
     setHash(index);
+    setIsOpen(false);
     if (index === "top") {
       scroll.scrollToTop();
     } else {
@@ -45,7 +46,7 @@ const Topbar = () => {
   useEffect(() => {
     $(function () {
       $(window).on("scroll", function () {
-        if ($(window).scrollTop() > 630) {
+        if ($(window).scrollTop() > 550) {
           $(".top").removeClass("active");
           $(".about").addClass("active");
         } else {
@@ -53,21 +54,21 @@ const Topbar = () => {
           $(".about").removeClass("active");
         }
 
-        if ($(window).scrollTop() > 1300) {
+        if ($(window).scrollTop() > 1150) {
           $(".about").removeClass("active");
           $(".skills").addClass("active");
         } else {
           $(".skills").removeClass("active");
         }
 
-        if ($(window).scrollTop() > 2000) {
+        if ($(window).scrollTop() > 1800) {
           $(".skills").removeClass("active");
           $(".projects").addClass("active");
         } else {
           $(".projects").removeClass("active");
         }
 
-        if ($(window).scrollTop() > 2900) {
+        if ($(window).scrollTop() > 2700) {
           $(".projects").removeClass("active");
           $(".experiences").addClass("active");
         } else {
@@ -82,26 +83,12 @@ const Topbar = () => {
     });
   }, []);
 
-  // const fadeInDown = {
-  //   initial: {
-  //     y: -70,
-  //     opacity: 0,
-  //   },
-  //   animate: {
-  //     y: 0,
-  //     opacity: 1,
-  //     transition: { type: "tween", duration: 1.1 },
-  //   },
-  // };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: -70 }}
       whileInView={{ opacity: 1, y: 0 }}
-      // viewport={{ margin: "100% 0px -300px 0px" }}
-      // whileTap={{ height: "288px" }}
-      transition={{ duration: 1.1 }}
-      className={`fixed h-14 z-50 w-[calc(100%-28rem)] flex justify-between gap-4 rounded px-4 py-2.5 shadow-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-100 border border-gray-100 max-xl:w-[calc(100%-16rem)] max-lg:w-[calc(100%-8rem)] max-md:w-[calc(100%-4rem)] trans-anim ${
+      transition={{ duration: 0.7 }}
+      className={`fixed h-14 z-50 w-[calc(100%-28rem)] flex justify-between gap-4 rounded px-4 py-2.5 shadow-lg bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-100 max-xl:w-[calc(100%-16rem)] max-lg:w-[calc(100%-8rem)] max-md:w-[calc(100%-4rem)] trans-anim ${
         isOpen ? "h-72 items-start trans-anim2" : "items-start"
       }`}
     >
@@ -110,8 +97,8 @@ const Topbar = () => {
           onClick={() => handleNavigate("top")}
           className="flex items-center justify-center gap-2 cursor-pointer"
         >
-          <img src={node_js} className="w-7 h-7" alt="" />
-          <h1 className="text-2xl font-['Rubik'] max-lg:hidden">SOWABCODE</h1>
+          <img src={node_js} className="w-7 h-7" alt="Logo" />
+          <h1 className="text-2xl font-[500] max-lg:hidden">SOWABCODE</h1>
         </div>
         <label
           // htmlFor="check"
@@ -122,25 +109,12 @@ const Topbar = () => {
         </label>
       </div>
       <motion.div
-        initial={{ opacity: 0, x: 30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 2 }}
-        // viewport={{ margin: "100% 0px -300px 0px" }}
-        // animate={{
-        //   x: 0,
-        //   opacity: 1,
-        //   transition: { type: "tween", duration: 1.5 },
-        // }}
+        // initial={{ opacity: 0, x: 30 }}
+        // whileInView={{ opacity: 1, x: 0 }}
+        // transition={{ duration: 2 }}
         className="flex items-center gap-6 font-[400] relative"
       >
-        {/* <input
-          type="checkbox"
-          id="check"
-          checked={isOpen}
-          className="hidden"
-          onChange={() => setIsOpen(!isOpen)}
-        /> */}
-        <nav className="font-[500] flex items-center gap-4 max-lg:hidden">
+        <nav className="font-[500] flex items-center gap-x-6 max-lg:hidden">
           <Link
             className={`link top ${hash === "top" ? " active" : ""}`}
             onClick={() => handleNavigate("top")}
@@ -181,7 +155,7 @@ const Topbar = () => {
         <div className="flex items-center gap-5">
           <Link
             onClick={() => handleNavigate("contact")}
-            className="font-semibold bg-blue-900 text-white py-1.5 px-4 rounded"
+            className="bg-blue-900 text-white py-1.5 px-4 rounded"
           >
             Contact
           </Link>
@@ -196,7 +170,7 @@ const Topbar = () => {
           initial={{ opacity: 0, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 2.5 }}
-          className="lg:hidden font-[500] flex flex-col items-start gap-4 absolute top-14 left-0 w-full px-4 border-t border-blue-700 pt-3"
+          className="lg:hidden font-[400] flex flex-col items-start gap-4 absolute top-14 left-0 w-full px-4 border-t border-blue-700 pt-3"
         >
           <Link
             className={`link top ${hash === "top" ? " active" : ""}`}

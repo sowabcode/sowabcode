@@ -9,7 +9,6 @@ import { TypeAnimation } from "react-type-animation";
 import abdoul from "../assets/images/Aboulaye.jpg";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-// bg-[#e3eeff]
 
 const Home = () => {
   return (
@@ -21,11 +20,19 @@ const Home = () => {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.7 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="z-40 flex flex-col items-start justify-center"
         >
-          <h2 className="text-2xl">Hello,</h2>
-          <h1 className="font-['Rubik'] text-5xl my-5 max-md:text-4xl">
+          <h2 className="text-lg">
+            Hello{" "}
+            <span
+              className="font-bold text-3xl inline-block"
+              style={{ animation: "1.5s infinite alternate slide-in" }}
+            >
+              👋
+            </span>
+          </h2>
+          <h1 className="font-[600] text-5xl my-5 max-md:text-4xl">
             I&apos;m SOWABCODE
           </h1>
           <p className="">
@@ -49,7 +56,7 @@ const Home = () => {
             />
           </p>
 
-          <p className="text-[.95rem] font-['Montserrat'] font-[500] text-black my-5 leading-[1.4rem] w-[500px] max-md:w-full">
+          <p className="text-[18px] text-slate-800 my-5 w-[500px] max-md:w-full max-md:text-justify">
             Je crée des expériences utilisateurs exceptionnelles avec des
             interfaces intuitives. Je mets l&apos;accent sur les détails, la
             scalabilité et les performances pour garantir des solutions robustes
@@ -74,7 +81,7 @@ const Home = () => {
           variants={fadeIn("left", 0.2)}
           initial={"hidden"}
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.7 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="z-40 flex items-center justify-center relative"
         >
           <img
@@ -83,13 +90,13 @@ const Home = () => {
             alt=""
           />
 
-          <span className="absolute -top-20 grid place-items-center hover:bg-white rounded-full p-4 hover:shadow-md max-xl:top-4 max-xl:right-8 max-sm:top-1">
+          <span className="test-anim absolute -top-20 grid place-items-center bg-white rounded-full p-4 max-md:p-2 shadow-md max-xl:top-4 max-xl:right-8 max-sm:top-1">
             <FaHtml5 size={35} color="orange" />
           </span>
-          <span className="absolute -bottom-20 grid place-items-center hover:bg-white rounded-full p-4 hover:shadow-md max-xl:bottom-4 max-xl:right-8 max-sm:-bottom-1">
+          <span className="absolute -bottom-20 grid place-items-center bg-white rounded-full p-4 max-md:p-2 shadow-md max-xl:bottom-4 max-xl:right-8 max-sm:-bottom-1">
             <FaHtml5 size={35} color="blue" />
           </span>
-          <span className="absolute right-0 grid place-items-center hover:bg-white rounded-full p-4 hover:shadow-md max-xl:-right-8 z-10">
+          <span className="absolute right-0 grid place-items-center bg-white rounded-full p-4 max-md:p-2 shadow-md max-xl:-right-8 z-10">
             <FaHtml5 size={35} color="yellow" />
           </span>
         </motion.div>

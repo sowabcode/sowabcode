@@ -9,6 +9,17 @@ import express from "../assets/images/express-js.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
+const skills = [
+  { name: "React", img: react },
+  { name: "Node JS", img: node },
+  { name: "MongoDB", img: mongodb },
+  { name: "Javascript", img: javascript },
+  { name: "Tailwind CSS", img: tailwind },
+  { name: "Express JS", img: express },
+  { name: "HTML5", img: html },
+  { name: "CSS3", img: html },
+];
+
 const Skills = () => {
   return (
     <motion.div
@@ -19,16 +30,28 @@ const Skills = () => {
       name="skills"
       className="h-screen overflow-hidden px-[14rem] max-xl:h-full max-xl:px-[8rem] max-lg:px-[4rem] max-md:px-[2rem] pb-[4rem]"
     >
-      <h1 className="text-center py-20 text-[1.8rem]">Skills</h1>
+      <h1 className="text-center py-10 text-[2rem] font-[500]">Skills</h1>
 
-      <div className="flex flex-wrap items-center justify-between gap-14 mx-[10rem] max-xl:mx-[6rem] max-md:mx-[2rem] max-sm:mx-0 max-md:gap-8 max-[500px]:gap-4 my-anima">
-        <div className="flex flex-col items-center gap-2">
-          <span className="grid place-items-center p-4 rounded-full bg-blue-200">
-            <img src={react} alt="" className="w-14 h-14 object-cover" />
-          </span>
-          <h3 className="font-[400] text-md">React</h3>
-        </div>
-        <div className="flex flex-col items-center gap-2">
+      <div className="grid grid-cols-5 gap-10 max-xl:mx-[6rem] max-md:grid-cols-3 max-md:mx-[2rem] max-sm:mx-0 max-md:gap-8 max-[500px]:gap-4 my-anima">
+        {skills?.map((skill, index) => (
+          <div key={index} className="flex flex-col items-center gap-2">
+            <span className="grid place-items-center p-4 rounded-full bg-blue-200">
+              <img
+                src={skill.img}
+                alt=""
+                className={`${
+                  skill.name === "React" ||
+                  skill.name === "MongoDB" ||
+                  skill.name === "Express JS"
+                    ? "object-cover"
+                    : "object-contain"
+                } w-14 h-14`}
+              />
+            </span>
+            <h3 className="font-[400] text-md text-center">{skill.name}</h3>
+          </div>
+        ))}
+        {/* <div className="flex flex-col items-center gap-2">
           <span className="grid place-items-center p-4 rounded-full bg-blue-200">
             <img src={node} alt="" className="w-14 h-14 object-cover" />
           </span>
@@ -50,7 +73,7 @@ const Skills = () => {
           <span className="grid place-items-center p-4 rounded-full bg-blue-200">
             <img src={tailwind} alt="" className="w-14 h-14 object-contain" />
           </span>
-          <h3 className="font-[400]">Tailwind CSS</h3>
+          <h3 className="font-[400] text-center">Tailwind CSS</h3>
         </div>
         <div className="flex flex-col items-center gap-2">
           <span className="grid place-items-center p-4 rounded-full bg-blue-200">
@@ -105,7 +128,7 @@ const Skills = () => {
             <img src={html} alt="" className="w-14 h-14 object-cover" />
           </span>
           <h3 className="font-[400]">HTML5</h3>
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );
