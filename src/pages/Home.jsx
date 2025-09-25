@@ -1,28 +1,18 @@
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
+import { TypeAnimation } from "react-type-animation";
+
 import Topbar from "../components/layouts/Topbar";
 
-// import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineFileDownload } from "react-icons/md";
-import {
-  FaCss3,
-  FaFacebookF,
-  FaHtml5,
-  FaJs,
-  FaLinkedinIn,
-  FaTwitter,
-} from "react-icons/fa6";
+import { FaCss3, FaHtml5, FaJs } from "react-icons/fa6";
 
-// import banner from "../assets/images/banner1.jpeg";
 import cv from "../assets/pdf/cv.pdf";
-
-import { TypeAnimation } from "react-type-animation";
 
 import abdoul from "../assets/images/Aboulaye.jpg";
 import figma from "../assets/images/tech/Figma.png";
 import react from "../assets/images/tech/React.png";
 import node from "../assets/images/tech/Node.js.png";
-import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
-// import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
