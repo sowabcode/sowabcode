@@ -10,9 +10,60 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --shadow-medium: 0 8px 30px -8px hsl(222 84% 20% / 0.2);
+  }
+}
+
+@layer utilities {
+  .shadow-medium {
+    /* on suit la convention Tailwind pour le shadow afin d'éviter les conflits */
+    --tw-shadow: var(--shadow-medium);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+}
+
+@font-face {
+  font-family: "Poppins";
+  /* src: url("./assets/fonts/poppins/Poppins-Thin.ttf") format("truetype"); */
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  /* src: url("./assets/fonts/poppins/Poppins-ExtraLight.ttf") format("truetype"); */
+  font-weight: 200; /* ExtraLight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  /* src: url("./assets/fonts/poppins/Poppins-Light.ttf") format("truetype"); */
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  /* src: url("./assets/fonts/poppins/Poppins-Regular.ttf") format("truetype"); */
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  /* src: url("./assets/fonts/poppins/Poppins-Bold.ttf") format("truetype"); */
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
 .link {
-  @apply cursor-pointer border-none hover:text-blue-900 before:ml-auto before:content-[''] before:bg-blue-900 before:block before:transition-all before:delay-150 after:content-[''] after:w-0 after:h-0.5 after:bg-blue-900 after:block after:transition-all after:delay-150 hover:before:w-full hover:after:w-full font-[400];
+  @apply text-[16px] cursor-pointer border-none hover:text-blue-900 before:ml-auto before:content-[''] before:bg-blue-900 before:block before:transition-all before:delay-150 after:content-[''] after:w-0 after:h-0.5 after:bg-blue-900 after:block after:transition-all after:delay-150  font-[400];
   /* animation: fillBars 2.5s ease-in-out; */
+  /* hover:before:w-full hover:after:w-full */
 }
 
 .active {

@@ -1,6 +1,6 @@
 import Topbar from "../components/layouts/Topbar";
 
-import { MdKeyboardArrowRight } from "react-icons/md";
+// import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineFileDownload } from "react-icons/md";
 import {
   FaCss3,
@@ -17,9 +17,12 @@ import cv from "../assets/pdf/cv.pdf";
 import { TypeAnimation } from "react-type-animation";
 
 import abdoul from "../assets/images/Aboulaye.jpg";
+import figma from "../assets/images/tech/Figma.png";
+import react from "../assets/images/tech/React.png";
+import node from "../assets/images/tech/Node.js.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -59,7 +62,7 @@ const Home = () => {
               sequence={[
                 // Same substring at the start will only be typed out once, initially
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
-                "Frontend Developper",
+                "Fullstack Developper",
                 2000,
                 "Web Designer",
                 1000,
@@ -70,7 +73,7 @@ const Home = () => {
               speed={50}
               className="text-blue-700"
               style={{
-                fontSize: "1.8em",
+                fontSize: "1.7em",
                 display: "inline-block",
                 backgroundImage: "linear-gradient(135deg, #1afbf0, #da00ff)",
                 WebkitBackgroundClip: "text",
@@ -80,7 +83,7 @@ const Home = () => {
             />
           </p>
 
-          <p className="text-[18px] text-slate-800 my-5 w-[500px] max-md:w-full max-md:text-justify">
+          <p className="text-[18px] text-slate-600 my-5 w-[500px] max-md:w-full max-md:text-justify">
             Je crée des expériences utilisateurs exceptionnelles avec des
             interfaces intuitives. Je mets l&apos;accent sur les détails, la
             scalabilité et les performances pour garantir des solutions robustes
@@ -99,12 +102,18 @@ const Home = () => {
               onClick={() =>
                 window.open(`${cv}`, "_blank", "resizeable,scrollbar")
               }
-              className="flex items-center gap-4 rounded border-2 border-blue-900 px-8 py-2.5 text-blue-900 max-[500px]:px-2 max-md:hidden"
+              className="flex items-center gap-4 rounded-md border-2 border-blue-900 px-2 py-2 text-blue-900 max-[500px]:px-2 max-md:hidden"
             >
               <span>Download CV</span>
-              <MdOutlineFileDownload size={20} className="animate-bounce" />
+              <MdOutlineFileDownload size={24} className="animate-bounce" />
             </button>
+
             <div className="flex flex-wrap items-center gap-4">
+              <img src={figma} alt="" className="w-12 h-12" />
+              <img src={react} alt="" className="w-12 h-12" />
+              <img src={node} alt="" className="w-12 h-12" />
+            </div>
+            {/* <div className="flex flex-wrap items-center gap-4">
               <span className="w-14 h-14 rounded-full grid place-items-center shadow-md cursor-pointer">
                 <FaLinkedinIn size={25} color="#0762C8" />
               </span>
@@ -118,13 +127,7 @@ const Home = () => {
               <span className="w-14 h-14 rounded-full grid place-items-center shadow-md cursor-pointer">
                 <FaTwitter size={25} color="#1DA1F2" />
               </span>
-              {/* <span className="w-10 h-10 rounded-full grid place-items-center bg-white cursor-pointer">
-                <FaInstagram size={25} color="#C13584" />
-              </span>
-              <span className="w-10 h-10 rounded-full grid place-items-center bg-white cursor-pointer">
-                <FaTiktok size={25} color="black" />
-              </span> */}
-            </div>
+            </div> */}
           </div>
         </motion.div>
         <motion.div

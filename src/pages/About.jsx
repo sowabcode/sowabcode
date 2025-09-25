@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import { PiCodeBold } from "react-icons/pi";
+import { BsFillLightningChargeFill } from "react-icons/bs";
+import { LuScanLine, LuUsers } from "react-icons/lu";
 
 const About = () => {
   return (
@@ -41,22 +44,68 @@ const About = () => {
               Abdoulaye Bademba SOW
             </h1>
             <p className="mb-5 rounded px-4 py-1.5 text-blue-700 bg-blue-200">
-              Frontend Developper
+              Passionate Developper
             </p>
-            <div className="space-y-3 text-[18px] text-justify text-slate-700">
+            <div className="space-y-3 text-[16px] text-justify text-slate-500">
               <p>
-                Je suis un développeur frontend basé à Conakry, en Guinée, avec
-                2 années d&apos;expériences richent en principes
-                d&apos;assurance qualité logicielle.
+                Je suis un développeur passionné avec 3 années
+                d&apos;expériences richent en principes d&apos;assurance qualité
+                logicielle. Ma plus grande force réside dans ma capacité à
+                combiner une expertise technique avec un sens aigu du design. Ma
+                passion pour le développement web découle de mon désir de créer
+                des expériences numériques fluides et intuitives.
               </p>
-              <p>
-                Ma plus grande force réside dans ma capacité à combiner une
-                expertise technique avec un sens aigu du design.
-              </p>
-              <p>
-                Ma passion pour le développement web découle de mon désir de
-                créer des expériences numériques fluides et intuitives.
-              </p>
+            </div>
+
+            <div className="w-full grid grid-cols-2 gap-4 max-md:grid-cols-1 mt-5">
+              <div className="flex items-center gap-4 border rounded-md p-2.5 group hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
+                <div
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(135deg, #1afbf0, #da00ff)",
+                  }}
+                  className="text-white grid place-items-center gap-2 rounded-md p-2"
+                >
+                  <PiCodeBold size={24} />
+                </div>
+                <span className="font text-[18px]">Dev passionate</span>
+              </div>
+              <div className="flex items-center gap-4 border rounded-md p-2.5 group hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
+                <div
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(135deg, #1afbf0, #da00ff)",
+                  }}
+                  className="text-white grid place-items-center gap-2 rounded-md p-2"
+                >
+                  <BsFillLightningChargeFill size={24} />
+                </div>
+                <span className="font text-[18px]">Innovation</span>
+              </div>
+              <div className="flex items-center gap-4 border rounded-md p-2.5 group hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
+                <div
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(135deg, #1afbf0, #da00ff)",
+                  }}
+                  className="text-white grid place-items-center gap-2 rounded-md p-2"
+                >
+                  <LuUsers size={24} />
+                </div>
+                <span className="font text-[18px]">Collaboration</span>
+              </div>
+              <div className="flex items-center gap-4 border rounded-md p-2.5 group hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
+                <div
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(135deg, #1afbf0, #da00ff)",
+                  }}
+                  className="text-white grid place-items-center gap-2 rounded-md p-2"
+                >
+                  <LuScanLine size={24} />
+                </div>
+                <span className="font text-[18px]">Details matter</span>
+              </div>
             </div>
           </div>
         </motion.div>

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { MdOutlineLightMode } from "react-icons/md";
 
-import node_js from "../../assets/images/node-js.jpg";
+import node_js from "../../assets/images/tech/Node.js.png";
 
 import { animateScroll as scroll, scroller } from "react-scroll";
 
@@ -100,11 +100,11 @@ const Topbar = () => {
           <img src={node_js} className="w-7 h-7" alt="Logo" />
           <h1
             className="text-2xl font-[500] max-lg:hidden"
-            // style={{
-            //   backgroundImage: "linear-gradient(135deg, #1afbf0, #da00ff)",
-            //   WebkitBackgroundClip: "text",
-            //   WebkitTextFillColor: "transparent",
-            // }}
+            style={{
+              backgroundImage: "linear-gradient(135deg, #1afbf0, #da00ff)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
           >
             SOWABCODE
           </h1>

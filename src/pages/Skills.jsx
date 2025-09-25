@@ -1,24 +1,28 @@
-import css from "../assets/images/css.png";
-import html from "../assets/images/html.png";
-import react from "../assets/images/react.png";
-import node from "../assets/images/node-js.png";
-import mongodb from "../assets/images/mongodb.png";
-import javascript from "../assets/images/js.png";
-import tailwind from "../assets/images/tailwind-css.png";
-import express from "../assets/images/express-js.png";
+import css from "../assets/images/tech/CSS3.png";
+import html from "../assets/images/tech/HTML5.png";
+import react from "../assets/images/tech/React.png";
+import node from "../assets/images/tech/Node.js.png";
+import mongodb from "../assets/images/tech/MongoDB.png";
+import javascript from "../assets/images/tech/JavaScript.png";
+import typescript from "../assets/images/tech/TypeScript.png";
+import tailwind from "../assets/images/tech/Tailwind.png";
+import express from "../assets/images/tech/Express.png";
+import git from "../assets/images/tech/Git.png";
 
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
 const skills = [
-  { name: "React", img: react },
-  { name: "Node JS", img: node },
+  { name: "Node.js", img: node },
+  { name: "Express.js", img: express },
   { name: "MongoDB", img: mongodb },
-  { name: "Javascript", img: javascript },
+  { name: "React", img: react },
+  { name: "TypeScript", img: typescript },
+  { name: "JavaScript", img: javascript },
   { name: "Tailwind CSS", img: tailwind },
-  { name: "Express JS", img: express },
   { name: "HTML5", img: html },
   { name: "CSS3", img: css },
+  { name: "Git", img: git },
 ];
 
 const Skills = () => {
@@ -29,7 +33,7 @@ const Skills = () => {
       whileInView={"show"}
       viewport={{ once: true, amount: 0.7 }}
       name="skills"
-      className="h-screen overflow-hidden px-[14rem] max-xl:h-full max-xl:px-[8rem] max-lg:px-[4rem] max-md:px-[2rem] pb-[4rem]"
+      className="h-auto overflow-hidden px-[14rem] max-xl:h-full max-xl:px-[8rem] max-lg:px-[4rem] max-md:px-[2rem] pb-[4rem]"
     >
       <h1 className="text-center py-10 text-[2rem] font-[500]">Skills</h1>
 

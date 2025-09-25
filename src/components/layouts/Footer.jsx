@@ -16,6 +16,7 @@ import {
 
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   // const [hash, setHash] = useState("top");
@@ -43,11 +44,9 @@ const Footer = () => {
             <span className="uppercase font-['Rubik']">Sowabcode</span>{" "}
             Portfolio
           </h1>
-          <p className="mt-4 text-md font-[400]">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque fuga
-            nobis amet rerum suscipit consequuntur obcaecati praesentium commodi
-            itaque, porro vitae sit vel nisi ex ullam aut tempore molestias
-            harum.
+          <p className="mt-4 text-md font-[400] text-slate-600">
+            Développeur passionné créant des expériences numériques modernes et
+            performantes. Transformons vos idées en réalité.
           </p>
         </div>
 
@@ -144,9 +143,13 @@ const Footer = () => {
             <h2 className="text-xl font-[500]">Media</h2>
 
             <div className="flex flex-wrap items-center gap-4 mt-4">
-              <span className="w-10 h-10 rounded-full grid place-items-center bg-white cursor-pointer">
+              <Link
+                target="_blank"
+                to="https://www.linkedin.com/in/abdoulaye-bademba-sow-1b838698"
+                className="w-10 h-10 rounded-full grid place-items-center bg-white cursor-pointer"
+              >
                 <FaLinkedinIn size={25} color="#0762C8" />
-              </span>
+              </Link>
               <span className="w-10 h-10 rounded-full grid place-items-center bg-white cursor-pointer">
                 <FaFacebookF size={25} color="#4267B2" />
               </span>
@@ -170,7 +173,7 @@ const Footer = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="flex items-center justify-between py-5 border-t border-black"
       >
-        <p>
+        <p className="text-slate-600">
           Made with love by <span className="font-semibold">SOWABCODE</span>
         </p>
 

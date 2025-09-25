@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="h-screen overflow-hidden px-[14rem] max-xl:px-[8rem] max-xl:h-auto max-lg:px-[4rem] max-md:px-[2rem] pb-[4rem] my-anima"
+      className="h-auto overflow-hidden px-[14rem] max-xl:px-[8rem] max-xl:h-auto max-lg:px-[4rem] max-md:px-[2rem] pb-[4rem] my-anima"
     >
       <motion.h1
         variants={fadeIn("down", 0.2)}
@@ -25,7 +25,7 @@ const Contact = () => {
         Contact Me
       </motion.h1>
 
-      <div className="grid grid-cols-2 rounded-lg bg-white max-lg:grid-cols-1 my-anima hover:shadow-md hover:shadow-slate-200">
+      <div className="grid grid-cols-2 rounded-lg bg-white max-lg:grid-cols-1 my-anima hover:shadow-medium hover:shadow-slate-200">
         <motion.div
           variants={fadeIn("right", 0.2)}
           initial={"hidden"}
