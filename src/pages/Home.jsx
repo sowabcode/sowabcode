@@ -36,14 +36,7 @@ const Home = () => {
               👋
             </span>
           </h2>
-          <h1
-            className="font-[600] text-5xl my-5 max-md:text-4xl"
-            // style={{
-            //   backgroundImage: "linear-gradient(135deg, #1afbf0, #da00ff)",
-            //   WebkitBackgroundClip: "text",
-            //   WebkitTextFillColor: "transparent",
-            // }}
-          >
+          <h1 className="font-[600] text-5xl my-5 max-md:text-4xl">
             I&apos;m SOWABCODE
           </h1>
           <p className="">
@@ -81,13 +74,6 @@ const Home = () => {
           </p>
 
           <div className="grid grid-cols-2 gap-5 max-md:grid-cols-1 max-[500px]:gap-3 mt-4">
-            {/* <button className="group flex items-center gap-4 rounded border-2 border-blue-900 px-4 py-1.5 bg-blue-900 text-white max-[500px]:px-2">
-              <span>About me</span>
-              <MdKeyboardArrowRight
-                size={20}
-                className="group-hover:translate-x-1 my-anima"
-              />
-            </button> */}
             <button
               onClick={() =>
                 window.open(`${cv}`, "_blank", "resizeable,scrollbar")
@@ -103,21 +89,6 @@ const Home = () => {
               <img src={react} alt="" className="w-12 h-12" />
               <img src={node} alt="" className="w-12 h-12" />
             </div>
-            {/* <div className="flex flex-wrap items-center gap-4">
-              <span className="w-14 h-14 rounded-full grid place-items-center shadow-md cursor-pointer">
-                <FaLinkedinIn size={25} color="#0762C8" />
-              </span>
-              <Link
-                target="_blank"
-                to="https://www.facebook.com/abdoulaye.sow.735944"
-                className="w-14 h-14 rounded-full grid place-items-center shadow-md cursor-pointer"
-              >
-                <FaFacebookF size={25} color="#4267B2" />
-              </Link>
-              <span className="w-14 h-14 rounded-full grid place-items-center shadow-md cursor-pointer">
-                <FaTwitter size={25} color="#1DA1F2" />
-              </span>
-            </div> */}
           </div>
         </motion.div>
         <motion.div
